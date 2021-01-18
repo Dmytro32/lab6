@@ -29,8 +29,8 @@ jobs:
         - docker build -t dmytro32/lab4:django-travis .
         - docker build -t dmytro32/lab4:monitor-travis --file Dockerfile.site . 
         - docker images
-        - if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin; docker push dmytro32/lab4:django-travis; else echo "PR skip deploy"; fi
-        - if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin; docker push docker-push/lab4:monitor-travis; else echo "PR skip deploy"; fi
+        - if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-Virus22; docker push dmytro32/lab4:django-travis; else echo "PR skip deploy"; fi
+        - if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-Virus22; docker push docker-push/lab4:monitor-travis; else echo "PR skip deploy"; fi
     - stage: "Build Lab 5."
       name: "Build and run Docker images via make"
       services:
@@ -42,7 +42,7 @@ jobs:
       script:
         - make run
         - make test-app
-        - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+        - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-Virus22
         - make docker-push
 branches:
   only:
