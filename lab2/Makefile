@@ -23,3 +23,6 @@ deploy:
 	git add result.txt
 	git commit -m "Lab_2: result.txt"
 	git push 
+
+test_lab6:
+	pipenv run pytest tests/tests.py
