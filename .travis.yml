@@ -18,7 +18,7 @@ jobs:
       install:
         - cd ./lab3/
         - pipenv install
-      script: ./lab3/scripts/travis-build.sh
+      script: ./scripts/travis-build.sh
     - stage: "Build Lab 4."
       name: "Build Docker images & Home task"
       services:
