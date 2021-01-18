@@ -27,7 +27,7 @@ jobs:
         - cd ./lab4/
       script:
         - docker build -t dmytro32/lab4:django-travis .
-        - docker build -t dmytro32/lab4:monitor-travis --file Dockerfile.monitoring . 
+        - docker build -t dmytro32/lab4:monitor-travis --file Dockerfile.site . 
         - docker images
         - if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin; docker push dmytro32/lab4:django-travis; else echo "PR skip deploy"; fi
         - if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin; docker push docker-push/lab4:monitor-travis; else echo "PR skip deploy"; fi
