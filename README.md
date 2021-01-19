@@ -2,4 +2,4 @@
 1. Read trivis documentation
 2. add .trivis.yml
 3. Have problem with lab4 and lab5. Can't solved it
-![alt text](https://github.com/Dmytro32/foto/1.png "Error")
+![alt text](https://github.com/Dmytro32/labs/lab6/foto/1.png "Error")
